@@ -3,14 +3,14 @@ void main () {
 
     int cupons_left = 10;
 
-    IO.println("Welcome to park number 11 you as an entree now have 10 cupons");
-    String[] what_to_do = { "1. rolllercoster ", "2. circus ", "3. go home " };
-    IO.print(what_to_do[0]);
-    IO.print(what_to_do[1]);
-    IO.print(what_to_do[2]);
     // IO.println("circus");
     // IO.println("go home");
     while (true) {
+        IO.println("Welcome to park number 11 you as an entree now have 10 cupons");
+        String[] what_to_do = { "1. rolllercoster ", "2. circus ", "3. go home " };
+        IO.print(what_to_do[0]);
+        IO.print(what_to_do[1]);
+        IO.print(what_to_do[2]);
         
         int choice = 0;
         int height= 0;
@@ -18,11 +18,12 @@ void main () {
 
             choice = Integer.parseInt(IO.readln("give your choice: "));
             height = Integer.parseInt(IO.readln("how tall are you? "));
+            // how do i make it remember height if not via reurn ?
 
 
         } catch (NumberFormatException a ) {
             IO.println("sorry not one of the coichses");
-            return;
+            continue ;
         }
 
         if (choice == 1 && height > 1) {
@@ -33,7 +34,7 @@ void main () {
         } 
         else if (choice == 1 && height <=1){
            IO.println(" no can do bacaroo  too short");
-           break;
+           continue;
 
         }
 
@@ -48,6 +49,11 @@ void main () {
         } else if (choice == 1 && cupons_left == 0 || choice == 2 && cupons_left == 0) {
             IO.println("no can do you have 0 cupons left you must go home");
             break;
+        }
+
+        if (choice> 3){
+            IO.println("not a choise");
+            continue;
         }
         
     }
