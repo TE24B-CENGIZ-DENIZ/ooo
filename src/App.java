@@ -61,22 +61,22 @@
 
 // }
 
-
 //calc
-public static double plus(int a) {
-    return a;
+public static double plus(int a, int l) {
+  
+    return a+l;
 }
 
-public static double subs(int b) {
-    return b;
+public static double subs(int b, int q) {
+    return b-q;
 }
 
-public static double mult(int c) {
-    return c;
+public static double mult(int c, int z) {
+    return c*z;
 }
 
-public static double divide(int d) {
-    return d;
+public static double divide(int d, int g) {
+    return d/g;
 }
 
 void main() {
@@ -111,9 +111,8 @@ void main() {
                 IO.println("not a number redo");
                 return;
             }
-            int a = add1 + add2;
-            a = (int) plus(a);
-            IO.println("you got:" + a);
+
+            IO.println("you got:" + plus(add1, add2));
             IO.readln("continue?");
         } else if (eq_of_choice == 2) {
 
@@ -128,9 +127,8 @@ void main() {
                 IO.println("not a number redo");
                 return;
             }
-            int a = sub1 - sub2;
-            a = (int) subs(a);
-            IO.println("you got:" + a);
+         
+            IO.println("you got:" + subs(sub1,sub2));
             IO.readln("continue?");
 
         } else if (eq_of_choice == 3) {
@@ -146,9 +144,8 @@ void main() {
                 return;
             }
 
-            int a = mult1 * mult2;
-            a = (int) plus(a);
-            IO.println("you got:" + a);
+           
+            IO.println("you got:" + mult(mult1,mult2));
             IO.readln("continue?");
         } else if (eq_of_choice == 4) {
             int div1 = 0;
@@ -162,9 +159,8 @@ void main() {
                 IO.println("not a number redo");
                 return;
             }
-            int a = div1 / div2;
-            a = (int) plus(a);
-            IO.println("you got:" + a);
+           
+            IO.println("you got:" + divide(div1,div2));
             IO.readln("continue?");
 
         } else if (eq_of_choice == 5) {
