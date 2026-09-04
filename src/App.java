@@ -61,6 +61,8 @@
 
 // }
 
+
+//calc
 public static double plus(int a) {
     return a;
 }
