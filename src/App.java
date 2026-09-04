@@ -61,8 +61,20 @@
 
 // }
 
-public static double subs(int a) {
+public static double plus(int a) {
     return a;
+}
+
+public static double subs(int b) {
+    return b;
+}
+
+public static double mult(int c) {
+    return c;
+}
+
+public static double divide(int d) {
+    return d;
 }
 
 void main() {
@@ -94,8 +106,13 @@ void main() {
                 add2 = Integer.parseInt(IO.readln("write the second number: "));
 
             } catch (NumberFormatException a) {
-
+                IO.println("not a number redo");
+                return;
             }
+            int a = add1 + add2;
+            a = (int) plus(a);
+            IO.println("you got:" + a);
+            IO.readln("continue?");
         } else if (eq_of_choice == 2) {
 
             int sub1 = 0;
@@ -106,11 +123,13 @@ void main() {
                 sub2 = Integer.parseInt(IO.readln("write the second number: "));
 
             } catch (NumberFormatException b) {
-
+                IO.println("not a number redo");
+                return;
             }
             int a = sub1 - sub2;
             a = (int) subs(a);
             IO.println("you got:" + a);
+            IO.readln("continue?");
 
         } else if (eq_of_choice == 3) {
             int mult1 = 0;
@@ -121,9 +140,14 @@ void main() {
                 mult2 = Integer.parseInt(IO.readln("write the second number: "));
 
             } catch (NumberFormatException c) {
-
+                IO.println("not a number redo");
+                return;
             }
 
+            int a = mult1 * mult2;
+            a = (int) plus(a);
+            IO.println("you got:" + a);
+            IO.readln("continue?");
         } else if (eq_of_choice == 4) {
             int div1 = 0;
             int div2 = 0;
@@ -133,8 +157,13 @@ void main() {
                 div2 = Integer.parseInt(IO.readln("write the second number: "));
 
             } catch (NumberFormatException l) {
-
+                IO.println("not a number redo");
+                return;
             }
+            int a = div1 / div2;
+            a = (int) plus(a);
+            IO.println("you got:" + a);
+            IO.readln("continue?");
 
         } else if (eq_of_choice == 5) {
 
@@ -147,12 +176,6 @@ void main() {
             IO.readln();
             continue;
         }
-
-        IO.println();
-        IO.println();
-        IO.println();
-        IO.println();
-
     }
 
 }
